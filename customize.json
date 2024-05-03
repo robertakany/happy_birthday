@@ -1,0 +1,23 @@
+{
+  "greeting": "Salut",
+  "name": "John",
+  "greetingText": "j'aime beaucoup ton nom d'ailleurs!",
+  "wishText": "Que le seigneur soit toujours avec toi et qu'il te protège toujours ! ;)",
+  "imagePath": "img/john.png",
+  "text1": "C'est ton anniversaire !!!🥳🥳",
+  "textInChatBox": "hier j'allais faire ceci :🗣Joyeux anniversaire à toi!! Ouais🤣🤣! Beaucoup de blabla heureux... et mettre tes photos dans mon statut",
+  "sendButtonLabel": "Envoyer",
+  "text2": "C'est ce que j'allais faire.",
+  "text3": "Mais ensuite j'ai arrêté.",
+  "text4": "J'ai réalisé que je voulais faire quelque chose",
+  "text4Adjective": "special",
+  "text5Entry": "parceque,",
+  "text5Content": "Tu es special",
+  "smiley": ":)",
+  "bigTextPart1": "Do",
+  "bigTextPart2": "nc",
+  "wishHeading": "  Joyeux anniversaire! bro",
+  "outroText": "D'accord, reviens maintenant et dis-moi si ça t'a plu.",
+  "replayText": "",
+  "outroSmiley": ":)"
+}
