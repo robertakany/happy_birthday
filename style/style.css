@@ -106,6 +106,22 @@ body {
   }
 }
 
+.link{
+  color: #f700ff;
+  text-decoration:none !important;
+  cursor: pointer;
+  border: solid green 1px !important ;
+  padding: 3px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+.link:hover{
+  background-color: #f700ff;
+  color: white;
+  border-color: white;
+}
+
 
 .five p {
   font-size: 2rem;
