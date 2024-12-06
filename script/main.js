@@ -1,28 +1,33 @@
 // Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
-    .then(data => data.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Erreur lors du chargement du fichier JSON");
+      }
+      return response.json();
+    })
     .then(data => {
-      dataArr = Object.keys(data);
-      dataArr.map(customData => {
-        if (data[customData] !== "") {
+      const dataArr = Object.keys(data);
+      dataArr.forEach(customData => {
+        const element = document.querySelector(`[data-node-name*="${customData}"]`);
+        if (element) {
           if (customData === "imagePath") {
-            document
-              .querySelector(`[data-node-name*="${customData}"]`)
-              .setAttribute("src", data[customData]);
+            element.setAttribute("src", data[customData]);
           } else {
-            document.querySelector(`[data-node-name*="${customData}"]`).innerText = data[customData];
+            element.innerText = data[customData];
           }
+        } else {
+          console.warn(`Élément avec data-node-name="${customData}" introuvable dans le DOM.`);
         }
-
-        // Check if the iteration is over
-        // Run amimation if so
-        if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
-          animationTimeline();
-        } 
       });
+      animationTimeline(); // Lancer l'animation une fois le contenu injecté
+    })
+    .catch(error => {
+      console.error("Erreur lors de l'initialisation des données :", error);
     });
 };
+
 
 // Animation Timeline
 const animationTimeline = () => {
