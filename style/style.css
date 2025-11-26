@@ -240,6 +240,7 @@ h1 {
   font-weight: 300;
 }
 
+/* Conteneur existant : on ne touche pas */
 #replay {
   z-index: 3;
   cursor: pointer;
@@ -253,8 +254,31 @@ h1 {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Animation ponctuelle quand la souris passe */
 #replay:hover {
   transform: scale(1.1);
+}
+
+/* Style du lien interne : invisible mais interactif */
+#replay .replay-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  display: inline-block;
+  animation: replayPulse 2.2s ease-in-out infinite;
+}
+
+/* Animation "respiration douce" */
+@keyframes replayPulse {
+  0% {
+    text-shadow: 0 0 0 rgba(255, 0, 150, 0);
+  }
+  50% {
+    text-shadow: 0 0 18px rgba(255, 0, 150, 0.55);
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(255, 0, 150, 0);
+  }
 }
 
 /* MEDIA QUERIES (RESPONSIVE) */
