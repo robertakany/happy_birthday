@@ -62,3 +62,108 @@ h1 {
       width: 80%;
   }
 }
+
+
+/* --- NOUVEAUX STYLES POUR LE MESSAGE --- */
+
+/* Section de l'indice de défilement */
+.scroll-hint {
+    margin: 40px 0;
+    animation: bounce 1.5s infinite; /* Animation pour attirer l'oeil */
+}
+
+.scroll-hint p {
+    color: #ff69b4; /* Couleur rose vif */
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Section principale du message */
+.message-section {
+    width: 90%;
+    max-width: 700px;
+    margin: 60px auto 100px auto; /* Marge en bas pour laisser de la place au scrolling */
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05); /* Fond légèrement transparent */
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.3); /* Ombre rose pour le style */
+    text-align: center;
+}
+
+.message-box p {
+    color: #fff;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.message-box hr {
+    border: none;
+    height: 1px;
+    background-color: #ff69b4;
+    margin: 25px 0;
+}
+
+.moment {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #ffd700; /* Or (Gold) pour le moment de minuit */
+    margin-bottom: 25px !important;
+}
+
+.dedication {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #f0f0f0;
+}
+
+.dedication-end {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff69b4; /* Rose */
+}
+
+.final-wish {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.signature {
+    font-size: 1.4em;
+    font-weight: 900;
+    margin-top: 30px !important;
+    color: #ffd700; /* Signature en or */
+}
+
+/* Assurez-vous que le body permet le défilement */
+body {
+    /* ... (Gardez le style du body existant) ... */
+    min-height: 100vh; /* S'assurer qu'il y a de l'espace pour le défilement */
+}
+
+/* Adaptation pour les petits écrans (s'assurer que tout rentre) */
+@media (max-width: 600px) {
+    .message-section {
+        padding: 15px;
+    }
+    .moment {
+        font-size: 1.4em;
+    }
+    .dedication, .dedication-end, .final-wish {
+        font-size: 1em;
+    }
+}
